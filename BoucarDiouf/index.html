@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="icon" href="assets/images/logo.png" type="image/png"> -->
+    <link rel="stylesheet" href="styles/index.css" />
+    <title>BNP: Benen Vision Prod</title>
+  </head>
+  <body>
+    <!--
+        Note de travail
+            pour ce projet nous allons devoir faire du Desktop-first à la place
+            de mobile-first à cause de la situation.
+    -->
+    <header>
+      <figure>
+        <img src="assets/images/logo.png" alt="logo benen vision prod" />
+      </figure>
+      <input type="checkbox" name="none" id="check" />
+      <label for="check"></label>
+      <nav>
+        <ul>
+          <li class="selected"><a href="#propos">a propos</a></li>
+          <li><a href="#portfolio">portfolio</a></li>
+          <li><a href="#services">services</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="propos">
+        <figure>
+          <img src="assets/images/boucar.png" alt="Boucar Diouf" />
+        </figure>
+        <h1><strong>Boucar Diouf</strong></h1>
+        <ul>
+          <li>DESIGNER</li>
+          <li>UX-UI DESIGNER</li>
+          <li>MOTION DESIGNER</li>
+          <li>CONCEPTEUR WEB</li>
+        </ul>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis
+          culpa voluptas eos vero! Error asperiores corporis a iusto repellat
+          nemo possimus nobis voluptatibus quae, suscipit optio at omnis sunt
+          rerum nihil quasi. Eveniet, amet non culpa molestiae dicta quo! Unde
+          impedit amet illum cum quis libero maiores facere quaerat distinctio.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        <button>s'engager</button>
+      </section>
+
+      <section id="services">
+        <h1>mes services</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          maxime nulla perspiciatis optio nihil voluptatibus eos quos vitae
+          assumenda molestias tempore praesentium doloremque veniam porro rerum
+          molestiae quis ut officia dicta sequi iusto placeat, corporis modi
+          dolorem! Praesentium ea tenetur eum, voluptas iure minus ipsam est sit
+          at vero commodi!
+        </p>
+        <aside>
+          <figure>
+            <img
+              src="assets/images/interface_design.png"
+              alt="design interface"
+            />
+          </figure>
+          <h2>design interface</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam
+            beatae ipsum enim ex ipsam adipisci, porro ea asperiores nemo,
+            tenetur expedita? Commodi eligendi suscipit quo dolor? Quae, error.
+            Aliquid, iusto.
+          </p>
+        </aside>
+        <aside>
+          <figure>
+            <img
+              src="assets/images/motion-graphic.png"
+              alt="animation graphique"
+            />
+          </figure>
+          <h2>animation graphique</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, vel!
+            Suscipit nemo dolorum beatae voluptatum, omnis, quis sint ratione
+            fugiat eos eligendi molestias aspernatur itaque minima quisquam
+            libero minus illo?
+          </p>
+        </aside>
+        <aside>
+          <figure>
+            <img
+              src="assets/images/graphic-designer.png"
+              alt="design graphique"
+            />
+          </figure>
+          <h2>design graphique</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+            magni iusto quidem sint est excepturi facilis reprehenderit omnis
+            iste perferendis delectus possimus id provident ipsum earum beatae
+            deserunt, ad enim.
+          </p>
+        </aside>
+        <button>s'engager</button>
+      </section>
+
+      <section id="portfolio">
+        <h1>portfolio</h1>
+        <div>
+          <aside>
+            <figure><img src="assets/images/image1.png" alt="image" /></figure>
+            <figure><img src="assets/images/image2.png" alt="image" /></figure>
+            <figure><img src="assets/images/image3.png" alt="image" /></figure>
+            <figure><img src="assets/images/image4.png" alt="image" /></figure>
+            <figure><img src="assets/images/image5.png" alt="image" /></figure>
+            <figure><img src="assets/images/image6.png" alt="image" /></figure>
+          </aside>
+        </div>
+        
+        <button>s'engager</button>
+      </section>
+
+      <section id="contact">
+        <h1>contact</h1>
+        <!-- <p class="img"><img src="assets/images/contact.png" alt=""></p> -->
+        <form action="#" method="get">
+          <input type="text" name="prenom" placeholder="prenom" />
+          <input type="text" name="nom" placeholder="nom" />
+          <input type="mail" name="mail" placeholder="email"/>
+          <select name="pour">
+            <option value="simple">DESIGN SIMPLE</option>
+            <option value="ux/ui">UX-UI DESIGN</option>
+            <option value="motion">MOTION DESIGN</option>
+            <option value="web">CONCEPTION WEB</option>
+            <option value="tout">PROJET COMPLET</option>
+            <option value="embaucher">EMBAUCHER</option>
+          </select>
+          <textarea
+            name="complement"
+            value="Exprimez-vous et faites moi savoir vos imagination..."
+            placeholder="dites-nous en plus sur vos attentes..."
+          ></textarea>
+
+          <input class="button" type="submit" value="envoyer" />
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>@COPYRIGHT 2023</p>
+    </footer>
+  </body>
+</html>
