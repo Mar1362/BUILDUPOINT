@@ -480,6 +480,7 @@ footer p{margin: auto; font-size: small;}
     position: absolute;
     inset: 0;
     margin-inline: auto;
+    z-index: -1;
 }
 
 #contact input:not(input[type="submit"]), #contact select, #contact textarea{
