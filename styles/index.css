@@ -174,7 +174,7 @@ h1 {
     -webkit-background-clip: text;
     -ms-background-clip: text;
     font-weight: var(--weight-lv3);
-    font-size: 4em;
+    font-size: 3em;
     font-family: var(--police-name);
     text-transform: uppercase;
     letter-spacing: .05em;
