@@ -23,9 +23,10 @@
     --anim-offset: 30em;
 
     font-size: 15px;
-    
+
     scroll-behavior: smooth;
 }
+
 body {
     background-color: var(--secondary-color-black-blue);
 }
@@ -40,7 +41,8 @@ body {
     /* border: 1px solid red; */
 
 }
-*:target{
+
+*:target {
     scroll-padding-top: 25em;
 }
 
@@ -51,6 +53,7 @@ picture {
     height: auto;
     object-fit: contain;
 }
+
 p {
     font-family: var(--police-parag);
     font-weight: var(--weight-lv2);
@@ -125,12 +128,16 @@ a:hover {
     top: -0.1em;
     padding: .2em .2em;
 }
-.selected{
+
+.selected {
     padding: .2em 1em;
-    background-color: var(--secondary-color-black-blue);
+    background-color: var(--secondary-color-black-blue) !important;
+    border: 1px solid var(--primary-color-light-pink);
     border-radius: 20px;
+    box-shadow: 2px 2px 3px var(--primary-color-light-blue);
 }
-.selected a:hover{
+
+.selected a:hover {
     color: var(--primary-color-white);
     position: static;
 }
@@ -158,9 +165,12 @@ header label {
     position: relative;
     top: 0;
 }
+
 @keyframes floating {
-    50%{top: -2em;}
-    
+    50% {
+        top: -2em;
+    }
+
 }
 
 #propos figure img {
@@ -168,7 +178,7 @@ header label {
 }
 
 h1 {
-    color: rgba(0,0,0,0);
+    color: rgba(0, 0, 0, 0);
     background: linear-gradient(400deg, var(--primary-color-pink), var(--primary-color-light-blue));
     background-clip: text;
     -webkit-background-clip: text;
@@ -180,8 +190,16 @@ h1 {
     letter-spacing: .05em;
     padding-top: .5em;
 }
-#services h1, #portfolio h1, #contact h1{opacity: .8;}
-p{opacity: .5;}
+
+#services h1,
+#portfolio h1,
+#contact h1 {
+    opacity: .8;
+}
+
+p {
+    opacity: .5;
+}
 
 #propos ul li {
     position: relative;
@@ -198,23 +216,42 @@ p{opacity: .5;}
     border-radius: 20px;
     box-shadow: 3px 3px 2px var(--primary-color-pink);
     letter-spacing: .1em;
-    animation: pop infinite 5s ;
-    
-}
-#propos ul li:nth-of-type(2){animation-delay: 250ms;}
-#propos ul li:nth-of-type(3){animation-delay: 500ms;}
-#propos ul li:nth-of-type(4){animation-delay: 750ms;}
-@keyframes pop{
-    0%{top:0}
-    10%{top: -0.5em;}
-    20%{top: 0em;}
+    animation: pop infinite 5s;
 
 }
 
+#propos ul li:nth-of-type(2) {
+    animation-delay: 250ms;
+}
+
+#propos ul li:nth-of-type(3) {
+    animation-delay: 500ms;
+}
+
+#propos ul li:nth-of-type(4) {
+    animation-delay: 750ms;
+}
+
+@keyframes pop {
+    0% {
+        top: 0
+    }
+
+    10% {
+        top: -0.5em;
+    }
+
+    20% {
+        top: 0em;
+    }
+
+}
 
 
 
-.button, button {
+
+.button,
+button {
     padding: .5em 3em;
     border: none;
     background-color: var(--primary-color-pink);
@@ -227,25 +264,28 @@ p{opacity: .5;}
     letter-spacing: .1em;
     display: block;
     box-shadow: -10px 10px 10px var(--primary-color-light-pink),
-                10px -10px 10px var(--primary-color-light-pink),
-                10px -10px 10px var(--primary-color-light-pink),
-                -10px 0px 10px var(--primary-color-light-pink),
-                0px 0px 8px var(--primary-color-light-blue);
-    
+        10px -10px 10px var(--primary-color-light-pink),
+        10px -10px 10px var(--primary-color-light-pink),
+        -10px 0px 10px var(--primary-color-light-pink),
+        0px 0px 8px var(--primary-color-light-blue);
+
     border: 2px var(--primary-color-pink) inset;
     cursor: pointer;
     /* margin-inline: auto; */
 }
-.button:hover, button:hover{
+
+.button:hover,
+button:hover {
     border-style: outset;
     box-shadow: 0 10px 10px var(--primary-color-light-pink),
-                10px 0px 10px var(--primary-color-light-pink),
-                -10px 0px 10px var(--primary-color-light-pink),
-                0 -10px 10px var(--primary-color-light-pink),
-                0px 0px 8px var(--primary-color-light-blue);
+        10px 0px 10px var(--primary-color-light-pink),
+        -10px 0px 10px var(--primary-color-light-pink),
+        0 -10px 10px var(--primary-color-light-pink),
+        0px 0px 8px var(--primary-color-light-blue);
     font-size: 1.1 em;
 }
-#portfolio button{
+
+#portfolio button {
     margin-inline: auto;
 }
 
@@ -257,57 +297,83 @@ p{opacity: .5;}
 
 
 
-#services, #portfolio, #contact{
+#services,
+#portfolio,
+#contact {
     text-align: center;
     margin-top: 12em;
 }
-#services h1, #portfolio h1{
+
+#services h1,
+#portfolio h1 {
     font-weight: var(--weight-lv1);
 }
-#services h2{
+
+#services h2 {
     color: var(--primary-color-light-pink);
     letter-spacing: .1em;
 }
-#services p{
+
+#services p {
     max-width: 80%;
     margin-inline: auto;
     font-size: 1.2em;
     text-align-last: center;
 }
-#services aside{
+
+#services aside {
     display: inline-block;
     vertical-align: top;
     max-width: 250px;
     margin-right: 3em;
     margin-top: 7em;
 }
-#services aside p{
+
+#services aside p {
     text-align: justify;
     text-align-last: center;
     font-size: 1em;
 }
-#services img{width: 50%;}
-#services button{margin-inline: auto; margin-top: 6em;}
+
+#services img {
+    width: 50%;
+}
+
+#services button {
+    margin-inline: auto;
+    margin-top: 6em;
+}
 
 
-#portfolio{overflow: hidden;}
-#portfolio div{
+#portfolio {
+    overflow: hidden;
+}
+
+#portfolio div {
     margin-top: 2em;
     /* overflow: hidden; */
     margin-inline: auto;
     width: max-content;
 
 }
-#portfolio aside{
+
+#portfolio aside {
     width: max-content;
     position: relative;
     animation: slideshow infinite 20s alternate-reverse both ease-in-out;
 }
+
 @keyframes slideshow {
-    from{left: 15%;}
-    to{left: -85%;}
+    from {
+        left: 15%;
+    }
+
+    to {
+        left: -85%;
+    }
 }
-#portfolio aside figure{
+
+#portfolio aside figure {
     opacity: .7;
     display: inline-block;
     max-width: calc(100vw - var(--inline-offset));
@@ -316,7 +382,8 @@ p{opacity: .5;}
     z-index: 1;
     cursor: pointer;
 }
-#portfolio aside figure:hover::before{
+
+#portfolio aside figure:hover::before {
     content: "cliquer pour voir";
     position: absolute;
     inset: 0;
@@ -333,28 +400,42 @@ p{opacity: .5;}
     font-size: 1.2em;
     opacity: 1;
 }
-#portfolio aside figure img{border-radius: 10px;}
-#portfolio aside figure:hover{
+
+#portfolio aside figure img {
+    border-radius: 10px;
+}
+
+#portfolio aside figure:hover {
     margin-inline: 3em;
 }
-    
-#portfolio aside figure:hover img{box-shadow: 5px 5px 10px gray;}
 
-#portfolio aside:hover figure:not(:hover){opacity: .3;}
-#portfolio aside:hover{
+#portfolio aside figure:hover img {
+    box-shadow: 5px 5px 10px gray;
+}
+
+#portfolio aside:hover figure:not(:hover) {
+    opacity: .3;
+}
+
+#portfolio aside:hover {
     animation-play-state: paused;
 }
 
-#contact{
+#contact {
     /* padding-inline: var(--inline-offset); */
     background: url(../assets/images/contact.png) no-repeat;
     background-size: 400px 400px;
     background-position: right center;
     text-align: left;
 }
-#contact h1{text-align: center;}
 
-#contact input:not(input[type="submit"]), #contact select, #contact textarea{
+#contact h1 {
+    text-align: center;
+}
+
+#contact input:not(input[type="submit"]),
+#contact select,
+#contact textarea {
     display: block;
     margin-top: 2em;
     width: 50%;
@@ -368,19 +449,25 @@ p{opacity: .5;}
     padding: .5em;
     border: 1px groove var(--secondary-color-dark-blue);
 }
-#contact  input:first-of-type, #contact input:nth-of-type(2){width: 25%;}
-#contact *:focus{
+
+#contact input:first-of-type,
+#contact input:nth-of-type(2) {
+    width: 25%;
+}
+
+#contact *:focus {
     outline: none;
     border-color: var(--primary-color-light-pink);
     color: var(--primary-color-light-blue);
 }
-#contact textarea{
+
+#contact textarea {
     height: 250px;
     text-align: left;
     padding: 1.2em;
 }
 
-footer{
+footer {
     margin-top: 20em;
     padding-block: .5em;
     border-radius: 100px;
@@ -389,7 +476,11 @@ footer{
     margin-inline: auto;
     margin-bottom: 1em;
 }
-footer p{margin: auto; font-size: small;}
+
+footer p {
+    margin: auto;
+    font-size: small;
+}
 
 
 
@@ -425,10 +516,13 @@ footer p{margin: auto; font-size: small;}
         position: absolute;
         top: 100%;
         right: 15px;
-        
-        /* right: var(--inline-offset); */
+
     }
-    header nav ul{background: none;}
+
+    header nav ul {
+        background: none;
+    }
+
     header nav ul li {
         margin-bottom: 2em;
         padding: .1em 1em;
@@ -445,9 +539,14 @@ footer p{margin: auto; font-size: small;}
         background: url(../assets/images/icon-menu-close.svg) no-repeat 50% 50%;
     }
 
-    .button, button{margin-inline: auto;}
+    .button,
+    button {
+        margin-inline: auto;
+    }
 
-    #propos {text-align: center;}
+    #propos {
+        text-align: center;
+    }
 
     #propos figure {
         float: none;
@@ -459,44 +558,114 @@ footer p{margin: auto; font-size: small;}
         width: 95%;
         object-fit: contain;
     }
+
     #propos p {
         max-width: 100%;
         font-size: 1em;
     }
-    #propos ul li{
+
+    #propos ul li {
         font-size: x-small;
     }
 
-    #services aside{margin-top: 5em; max-width: 300px;}
+    #services aside {
+        margin-top: 5em;
+        max-width: 300px;
+    }
 
 
-    
-#contact{
-    background-position: center top;
-    padding-top: 300px;
-    position: relative;
+
+    #contact {
+        background-position: center top;
+        padding-top: 300px;
+        position: relative;
+    }
+
+    #contact h1 {
+        position: absolute;
+        inset: 0;
+        margin-inline: auto;
+        z-index: -1;
+    }
+
+    #contact input:not(input[type="submit"]),
+    #contact select,
+    #contact textarea {
+        width: 80%;
+        margin-inline: auto;
+    }
+
+    #contact textarea {
+        height: 250px;
+        text-align: left;
+        padding: 1.2em;
+    }
+
+
+    #portfolio div {
+        width: 100%;
+    }
+
+    #portfolio aside {
+        width: 100%;
+        animation: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        justify-content: center;
+
+    }
+
+    #portfolio aside figure {
+        display: inline;
+        flex-basis: 200px;
+    }
+
+
+    #portfolio aside figure:hover {
+        margin-inline: 0;
+    }
+
+
+
 }
-#contact h1{
+
+#scroll-detector{
     position: absolute;
-    inset: 0;
-    margin-inline: auto;
-    z-index: -1;
+    top: 0;
+    padding: 15em;
+    /* background-color: red; */
+    opacity: 0;
+    /* z-index: 2000; */
 }
 
-#contact input:not(input[type="submit"]), #contact select, #contact textarea{
-    width: 80%;
-    margin-inline: auto;
+@media screen and (min-width: 900px) {
+    .left-menu{
+        /* background-color: red; */
+        position: absolute;
+        right: -2em;
+        top: 30vh;
+    }
+    .left-menu ul{background: none;}
+    .left-menu li{
+        display: block;
+        margin-top: 1em;
+        background-color: var(--primary-color-light-pink);
+        text-align: center;
+        border-radius: 20px;
+        padding: .5em 1.5em;
+        animation: moving 2s;
+    }
 }
-#contact textarea{
-    height: 250px;
-    text-align: left;
-    padding: 1.2em;
+
+@keyframes moving{
+    50%{left: 50vw; top: 50vh;}
+    100%{left: -2em; top: 30vh;}
 }
 
-
-
-}
-
-@media only screen and (max-width: 780px){
-    #services aside{margin-top: 7em; max-width: 70%;}
+@media only screen and (max-width: 780px) {
+    #services aside {
+        margin-top: 7em;
+        max-width: 70%;
+    }
 }
