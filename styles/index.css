@@ -13,7 +13,7 @@
     --weight-lv2: 600;
     --weight-lv3: 800;
 
-    --logo-size: 40px;
+    --logo-size: 80px;
 
     --police-name: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     --police-parag: 'Times New Roman', Times, serif;
@@ -71,7 +71,7 @@ p {
 #services,
 #portfolio,
 #contact {
-    width: min(1100px, calc(100vw - var(--inline-offset)));
+    width: min(1500px, calc(100vw - var(--inline-offset)));
     margin: auto;
     padding-block: 1em;
 }
@@ -89,9 +89,12 @@ header {
     z-index: 1000;
 }
 
-header figure img {
+header figure {
     width: var(--logo-size);
     height: auto;
+    position: relative;
+    left: -25px;
+    top: -25px;
 }
 
 /* 
@@ -124,16 +127,14 @@ a {
 
 a:hover {
     color: var(--primary-color-light-blue);
-    top: -0.1em;
-    padding: .2em .2em;
 }
 
 .selected {
-    padding: .2em 1em;
-    background-color: var(--secondary-color-black-blue) !important;
+    padding: .1em 1.5em;
+    background-color:   var(--secondary-color-black-blue) !important;
     border: 1px solid var(--primary-color-light-pink);
     border-radius: 20px;
-    box-shadow: 2px 2px 3px var(--primary-color-light-blue);
+    box-shadow: 1px 1px 2px var(--primary-color-light-blue);
 }
 
 .selected a:hover {
@@ -151,7 +152,7 @@ header label {
 
 #propos {
     margin-top: 150px;
-    padding-inline: 2%;
+    padding-inline: 5%;
 }
 
 #propos figure {
@@ -346,6 +347,11 @@ button:hover {
 #portfolio {
     overflow: hidden;
 }
+#portfolio p{
+    max-width: 100%;
+    text-align: center;
+    padding-inline: 10%;
+}
 
 #portfolio div {
     margin-top: 2em;
@@ -536,6 +542,11 @@ footer p {
     header input:checked~label {
         background: url(../assets/images/icon-menu-close.svg) no-repeat 50% 50%;
     }
+    .selected{
+        padding: 0 1.5em;
+        box-shadow: none;
+        border: none;
+    }
 
     .button,
     button {
@@ -652,13 +663,7 @@ footer p {
         text-align: center;
         border-radius: 20px;
         padding: .5em 1.5em;
-        animation: moving 2s;
     }
-}
-
-@keyframes moving{
-    50%{left: 50vw; top: 50vh;}
-    100%{left: -2em; top: 30vh;}
 }
 
 @media only screen and (max-width: 780px) {
