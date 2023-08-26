@@ -6,18 +6,13 @@ observer.observe(detector);
 function observing(entries, obs){
     entries.forEach(element => {
         if(element.isIntersecting){
-            console.log(element.intersectionRatio);
             if(element.isIntersecting){
-                // alert('hello')
                 if(element.intersectionRatio != 1){
                     menu.classList.toggle("left-menu");
                 }else{
                     menu.classList.remove("left-menu");
                 }
                 
-            }else{
-                // alert('bye bye')
-                // menu.classList.toggle("left-menu");
             }
         }
     });
