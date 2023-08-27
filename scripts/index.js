@@ -19,10 +19,25 @@ function observing(entries, obs){
 }
 
 const links = document.querySelectorAll('header nav ul li a');
-let lastLink = links[0];
-lastLink.classList.toggle('selected');
+const sections = document.querySelectorAll('section');
+let previousSelection = document.createElement('a');
 
-links.forEach((value) => {
-    lastLink = ((document.URL.toUpperCase().includes(value.textContent.toUpperCase()))) ? value : lastLink;
-    value.onclick = function(){value.classList.toggle('selected'); lastLink.classList.remove('selected'); lastLink = value;}
-})
+const menuObserver = new IntersectionObserver(changeSelection, {root:null, rootMargin: "0px", threshold: 0.5});
+sections.forEach((e) => {menuObserver.observe(e);});
+
+function changeSelection(entries, observer){
+    entries.forEach((entry)=>{
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.5){
+            let sectionid = entry.target.id;
+            links.forEach(link => {
+                console.log(link.getAttribute("href"))
+                if(link.getAttribute("href").includes(sectionid)){
+                    console.log(link.getAttribute("href"))
+                    previousSelection.classList.toggle("selected");
+                    link.classList.toggle("selected");
+                    previousSelection = link;
+                }
+            });
+        }
+    })
+}

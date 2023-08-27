@@ -37,7 +37,6 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: all 1s;
     /* border: 1px solid red; */
 
 }
@@ -61,7 +60,7 @@ p {
     text-align: left;
     color: var(--primary-color-white);
     font-size: 1em;
-    letter-spacing: .05em;
+    letter-spacing: .1em;
     max-width: 50%;
 
 }
@@ -110,6 +109,7 @@ header nav ul {
 }
 
 header nav ul li {
+    transition: all 1s;
     font-size: 1em;
     display: inline-block;
     margin-left: 1em;
@@ -157,23 +157,17 @@ header label {
 
 #propos figure {
     float: right;
-    width: 26em;
-    border-radius: 50%;
+    width: 25em;
     overflow: hidden;
     animation: floating 4s infinite both alternate ease-in-out;
     position: relative;
-    top: 0;
+    top: 5em;
 }
-
 @keyframes floating {
     50% {
-        top: -2em;
+        top: -1em;
     }
 
-}
-
-#propos figure img {
-    width: 115%;
 }
 
 h1 {
@@ -343,7 +337,6 @@ button:hover {
     margin-top: 6em;
 }
 
-
 #portfolio {
     overflow: hidden;
 }
@@ -364,7 +357,7 @@ button:hover {
 #portfolio aside {
     width: max-content;
     position: relative;
-    animation: slideshow infinite 20s alternate-reverse both ease-in-out;
+    animation: slideshow infinite 30s alternate-reverse both ease-in-out;
 }
 
 @keyframes slideshow {
@@ -385,6 +378,7 @@ button:hover {
     position: relative;
     z-index: 1;
     cursor: pointer;
+    transition: all .5s;
 }
 
 #portfolio aside figure:hover::before {
@@ -561,11 +555,6 @@ footer p {
         float: none;
         width: 60%;
         margin: auto;
-    }
-
-    #propos figure img {
-        width: 95%;
-        object-fit: contain;
     }
 
     #propos p {
