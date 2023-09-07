@@ -416,7 +416,6 @@ button:hover {
 }
 
 #contact {
-    /* padding-inline: var(--inline-offset); */
     background: url(../assets/images/contact.png) no-repeat;
     background-size: 400px 400px;
     background-position: right center;
@@ -433,9 +432,7 @@ button:hover {
     display: block;
     margin-top: 2em;
     width: 50%;
-    /* min-height: 30px; */
     border-radius: 20px;
-    /* font-size: 1.1em; */
     font-weight: var(--weight-lv2);
     text-align: center;
     background: none;
@@ -500,7 +497,8 @@ footer p {
 
 @media only screen and (max-width: 900px) {
     p{
-        text-align: justify;
+        text-align: justify !important;
+        text-align-last: center;
     }
     header label {
         background: url(../assets/images/icon-menu.svg) no-repeat 50% 50%;
