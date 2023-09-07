@@ -59,7 +59,7 @@ p {
     margin-top: 2em;
     text-align: left;
     color: var(--primary-color-white);
-    font-size: 1em;
+    font-size: 1.1em;
     letter-spacing: .1em;
     max-width: 50%;
 
@@ -147,9 +147,6 @@ header label {
     display: none;
 }
 
-
-
-
 #propos {
     margin-top: 150px;
     padding-inline: 5%;
@@ -161,11 +158,11 @@ header label {
     overflow: hidden;
     animation: floating 4s infinite both alternate ease-in-out;
     position: relative;
-    top: 5em;
+    top: 15em;
 }
 @keyframes floating {
     50% {
-        top: -1em;
+        top: 9em;
     }
 
 }
@@ -246,7 +243,6 @@ p {
 .button,
 button {
     padding: .5em 3em;
-    border: none;
     background-color: var(--primary-color-pink);
     color: var(--primary-color-white);
     text-transform: uppercase;
@@ -503,6 +499,9 @@ footer p {
 
 
 @media only screen and (max-width: 900px) {
+    p{
+        text-align: justify;
+    }
     header label {
         background: url(../assets/images/icon-menu.svg) no-repeat 50% 50%;
         padding: 10px 20px;
@@ -542,6 +541,7 @@ footer p {
         border: none;
     }
 
+    
     .button,
     button {
         margin-inline: auto;
@@ -555,11 +555,20 @@ footer p {
         float: none;
         width: 60%;
         margin: auto;
+        top: 0em;
+    }
+
+    @keyframes floating {
+        50% {
+            top: 3em;
+        }
+    
     }
 
     #propos p {
         max-width: 100%;
-        font-size: 1em;
+        font-size: 1.2em;
+        text-align: justify;
     }
 
     #propos ul li {
